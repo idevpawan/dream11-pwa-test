@@ -35,7 +35,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#00dddd" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#e10000" />
 
         <link rel="apple-touch-icon" href="/icons/android-chrome-192x192.png" />
         <link
