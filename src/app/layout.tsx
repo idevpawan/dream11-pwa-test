@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
+import { AnimatePresence } from "framer-motion";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,7 +37,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#00dddd" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="theme-color" content="#e10000" />
+        <meta name="theme-color" content="#991b1b" />
 
         <link rel="apple-touch-icon" href="/icons/android-chrome-192x192.png" />
         <link
@@ -72,8 +73,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} animate-fade-in antialiased`}
       >
-        <Header />
-        {children}
+        <AnimatePresence>
+          <Header />
+          {children}
+        </AnimatePresence>
       </body>
     </html>
   );
