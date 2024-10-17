@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/Header";
-import { AnimatePresence } from "framer-motion";
+import HOC from "./HOC";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -73,10 +72,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} animate-fade-in antialiased`}
       >
-        <AnimatePresence>
-          <Header />
-          {children}
-        </AnimatePresence>
+        <HOC>{children}</HOC>
       </body>
     </html>
   );

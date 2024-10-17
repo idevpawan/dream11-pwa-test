@@ -61,7 +61,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <div className="h-32 overflow-hidden flex flex-col justify-between bg-red-800 shadow-lg text-white p-4">
+      <div className="h-32 fixed top-0 left-0 w-full z-30 overflow-hidden flex flex-col justify-between bg-red-800 shadow-lg text-white p-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
             <div
@@ -112,7 +112,7 @@ function Header() {
       </div>
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div className="absolute z-30 top-0 left-0 w-full h-full">
+          <motion.div className="fixed z-30 top-0 left-0 w-full h-full">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
